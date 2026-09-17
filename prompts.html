@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompts — DARKROOM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><a href="index.html" class="logo">DARKROOM <small>PHOTOGRAPHY EDITS</small></a><nav class="desktop-nav"><a href="index.html">HOME</a><a href="index.html#edits">EDITS</a><a class="active" href="prompts.html">PROMPTS</a><a href="index.html#collections">COLLECTIONS</a><a href="index.html#about">ABOUT</a></nav><div class="header-actions"><a class="icon-btn" href="#">◎</a><a class="gold-btn header-cta" href="index.html#collections">EXPLORE →</a><button class="menu-btn" id="menuBtn">☰</button></div></header>
+<main class="prompt-page">
+<section class="page-title"><span class="eyebrow">AI EDITING · ARCHIVE</span><h1>THE PROMPT<br><em>LIBRARY.</em></h1><p>Creative directions for building dark, cinematic photographic edits.</p></section>
+<div class="prompt-filter"><button class="active">ALL</button><button>CINEMATIC</button><button>MOODY</button><button>PORTRAIT</button><button>TRAVEL</button><button>FILM</button></div>
+<div class="full-prompts">
+<article><span>01 / CINEMATIC</span><h2>MOODY CINEMATIC</h2><p>Transform this photograph into a moody cinematic image with deep controlled shadows, rich blacks, subtle warm highlights, muted colors and realistic texture while preserving the original composition.</p><button class="gold-btn copy-full">COPY PROMPT →</button></article>
+<article><span>02 / PORTRAIT</span><h2>DARK PORTRAIT</h2><p>Create a dark editorial portrait with sculpted shadows, controlled highlights, muted colors, subtle film grain and realistic skin texture while preserving facial details and natural proportions.</p><button class="gold-btn copy-full">COPY PROMPT →</button></article>
+<article><span>03 / LANDSCAPE</span><h2>DRAMATIC SKY</h2><p>Turn the sky into a dramatic cinematic atmosphere with layered storm clouds, dimensional light, rich contrast and natural colors. Keep the scene realistic and preserve the original composition.</p><button class="gold-btn copy-full">COPY PROMPT →</button></article>
+</div>
+</main>
+<div class="toast" id="toast">PROMPT COPIED ✓</div>
+<script>
+document.querySelectorAll(".copy-full").forEach(btn=>btn.addEventListener("click",async()=>{const text=btn.parentElement.querySelector("p").textContent;await navigator.clipboard.writeText(text);document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),1600)}));
+document.getElementById("menuBtn")?.addEventListener("click",()=>document.body.classList.toggle("menu-open"));
+</script>
+</body></html>
